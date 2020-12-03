@@ -1,0 +1,279 @@
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+%
+\usepackage{setspace}
+\usepackage{gensymb}
+%\doublespacing
+\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+%\usepackage{iithtlc}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+%\usepackage{stmaryrd}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+%\lstset{
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
+
+\begin{document}
+%
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+%\numberwithin{equation}{section}
+\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+\renewcommand{\thefigure}{\theproblem}
+%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
+%\counterwithin{equation}{enumi}
+
+
+%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
+\vspace{3cm}
+
+
+\title{Assignment 19}
+\author{Jayati Dutta}
+
+
+
+
+
+% make the title area
+\maketitle
+
+%\newpage
+
+%\tableofcontents
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%\renewcommand{\theequation}{\theenumi}
+
+
+\begin{abstract}
+This is a simple document explaining how to express any matrix in square root form and how to express any matrix in Jordon form.
+\end{abstract}
+
+%Download all python codes 
+%
+%\begin{lstlisting}
+%svn co https://github.com/JayatiD93/trunk/My_solution_design/codes
+%\end{lstlisting}
+
+Download all and latex-tikz codes from 
+%
+\begin{lstlisting}
+svn co https://github.com/gadepall/school/trunk/ncert/geometry/figs
+\end{lstlisting}
+%
+
+
+\section{Problem}
+Use the result of Exercise 15 (that is, if $\vec{A}=\vec{I}+\frac{1}{2}\vec{N}-\frac{1}{8}\vec{N}^2$ then $\vec{A}^2 = \vec{I}+\vec{N}$) to prove that if $c$ is a non-zero complex number and $\vec{N}$ is a nilpotent complex matrix, then $(c\vec{I}+\vec{N})$ has a square root. Now use the Jordon form to prove that every non-singular complex $n \times n$ matrix has a square root.
+ 
+
+\section{Solution} 
+\begin{longtable}{|c|c|}
+\hline
+\multirow{3}{*}{} & \\
+$\textbf{Given}$ & If $\vec{A}=\vec{I}+\frac{1}{2}\vec{N}-\frac{1}{8}\vec{N}^2$\\
+& then $\vec{A}^2 = \vec{I}+\vec{N}$ that is, $\vec{I}+\vec{N}$ has a \\
+& square root, where $\vec{N}$ is a nilpotent matrix.\\
+& \\
+\hline
+\textbf{To prove} & \\
+\hline
+\textbf{1} & $(c\vec{I}+\vec{N})$ has a square root,that is $(c\vec{I}+\vec{N})= \vec{X}^2$\\
+& where $c$ is a non-zero complex number, $\vec{N}$ is a \\
+& nilpotent complex matrix and $\vec{X}$ is any matrix.\\
+\hline
+\textbf{2} & Every non-singular complex $n \times n$ matrix \\
+& ($\vec{B}$) has a square root, that is, $\vec{B} = \vec{Y}^2$ where $\vec{Y}$\\
+&  is any matrix.\\
+\hline
+\multirow{3}{*}{} & \\
+\textbf{Proof 1} & As given in the problem statement,\\
+& $\vec{A}^2 = \vec{I}+\vec{N}$ \\
+& $\implies \vec{A}^2 = c\vec{I} - c\vec{I}+ \vec{I} +\vec{N}$\\
+& $\implies \vec{A}^2 +c\vec{I}- \vec{I}= c\vec{I}+\vec{N}$\\
+& $\implies \vec{A}^2 + (c-1)\vec{I}= c\vec{I}+\vec{N}$\\
+& \\
+\hline
+\textbf{Conclusion} &\\
+\hline
+\multirow{3}{*}{} & \\
+\textbf{Proof 2} & Let $\vec{B}$ is any non-singular complex matrix.\\
+& So, $\vec{B}\vec{B}^{-1}= \vec{I}$\\
+& As per the Jordon's Theorem, every square matrix B\\
+&  is similar to a Jordon matrix $\vec{J}$, that is, $\vec{B}=\vec{P}\vec{J}\vec{P}^{-1}$\\
+& Now, let consider a $n \times n$ nilpotent shift matrix $\vec{N}$\\
+& $\vec{N}$ = \\
+& $\myvec{0 & 1 &0 &...& 0\\0 & 0 & 1& ...& 0\\.&.&.&...&.\\.&.&.&...&.\\.&.&.&...&1\\0 & 0 &0 &...& 0}$\\
+& $\vec{I}$ is a $n \times n$ identity matrix, so \\
+& $c\vec{I}+\vec{N}$ = \\
+& $\myvec{c & 1 &0 &...& 0\\0 & c & 1& ...& 0\\.&.&.&...&.\\.&.&.&...&.\\.&.&.&...&1\\0 & 0 &0 &...& c}$\\
+& and this is a Jordon form.\\
+& So, we can consider $\vec{J} = c\vec{I}+\vec{N}$ and \\
+& as $c\vec{I}+\vec{N}= \vec{X}^2$ \\
+& $\implies \vec{B}=\vec{P}\vec{X}^2\vec{P}^{-1}$\\
+& $\implies \vec{B}=\vec{P}\vec{X}\vec{P}^{-1}\vec{P}\vec{X}\vec{P}^{-1}$\\
+& $\implies \vec{B}=(\vec{P}\vec{X}\vec{P}^{-1})^2$\\
+& $\implies \vec{B}=\vec{Y}^2$, where $\vec{Y} = \vec{P}\vec{X}\vec{P}^{-1}$\\
+& This implies that $\vec{B}$ has a square root.\\
+\hline
+\textbf{Conclusion} & Hence it is proved that every non-singular complex \\
+& $n \times n$ matrix has a square root.\\
+& \\
+\hline
+\caption{$\textbf{Solution summary}$}
+\label{table:1}
+\end{longtable}
+%\renewcommand{\theequation}{\theenumi}
+%\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+%\numberwithin{equation}{enumi}
+%\item Verification of the above problem using python code.\\
+%\solution The  following Python code verifies the above solution.
+%\begin{lstlisting}
+%codes/multiplication_test.py
+%\end{lstlisting}
+%%%
+%\end{enumerate}
+
+\end{document}
+
+
+
