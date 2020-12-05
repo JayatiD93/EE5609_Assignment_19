@@ -210,7 +210,7 @@ Use the result of Exercise 15 (that is, if $\vec{A}=\vec{I}+\frac{1}{2}\vec{N}-\
 \begin{longtable}{|c|c|}
 \hline
 \multirow{3}{*}{} & \\
-$\textbf{Given}$ & If $\vec{A}=\vec{I}+\frac{1}{2}\vec{N}-\frac{1}{8}\vec{N}^2$\\
+\textbf{Given} & If $\vec{A}=\vec{I}+\frac{1}{2}\vec{N}-\frac{1}{8}\vec{N}^2$\\
 & then $\vec{A}^2 = \vec{I}+\vec{N}$ that is, $\vec{I}+\vec{N}$ has a \\
 & square root, where $\vec{N}$ is a nilpotent matrix.\\
 & \\
@@ -218,22 +218,32 @@ $\textbf{Given}$ & If $\vec{A}=\vec{I}+\frac{1}{2}\vec{N}-\frac{1}{8}\vec{N}^2$\
 \textbf{To prove} & \\
 \hline
 \textbf{1} & $(c\vec{I}+\vec{N})$ has a square root,that is $(c\vec{I}+\vec{N})= \vec{X}^2$\\
-& where $c$ is a non-zero complex number, $\vec{N}$ is a \\
-& nilpotent complex matrix and $\vec{X}$ is any matrix.\\
+& where $c$ is a non-zero complex number, $\vec{N}$ is a nilpotent\\
+&  complex matrix and $\vec{X}$ is any matrix.\\
 \hline
 \textbf{2} & Every non-singular complex $n \times n$ matrix \\
 & ($\vec{B}$) has a square root, that is, $\vec{B} = \vec{Y}^2$ where $\vec{Y}$\\
 &  is any matrix.\\
 \hline
 \multirow{3}{*}{} & \\
-\textbf{Proof 1} & As given in the problem statement,\\
-& $\vec{A}^2 = \vec{I}+\vec{N}$ \\
-& $\implies \vec{A}^2 = c\vec{I} - c\vec{I}+ \vec{I} +\vec{N}$\\
-& $\implies \vec{A}^2 +c\vec{I}- \vec{I}= c\vec{I}+\vec{N}$\\
-& $\implies \vec{A}^2 + (c-1)\vec{I}= c\vec{I}+\vec{N}$\\
+\textbf{Proof 1} & Let us consider, $c \neq 0$ and $c \in \vec{C}$\\
+& then, there exists $\frac{1}{c} \in \vec{C}$\\
+& Given $\vec{N}$ is a nilpotent, \\
+& $\implies \frac{1}{c}\vec{N}$ is also nilpotent.\\
+& From the problem statement, we get that $(\vec{I}+\frac{1}{c}\vec{N})$\\
+& has a square root, that is, $(\vec{I}+\frac{1}{c}\vec{N}) = \vec{M}^2$\\
+& where $\vec{M}^2$ is any matrix.\\
+& so, $(\vec{I}+\frac{1}{c}\vec{N}) = \vec{M}^2$\\
+& Multiplying both side with $c$, we get\\
+& $c(\vec{I}+\frac{1}{c}\vec{N}) = c\vec{M}^2$\\
+& $(c\vec{I}+\vec{N}) = c\vec{M}^2$\\
+& $\implies (c\vec{I}+\vec{N}) = (\sqrt{c}\vec{M})^2$\\
+& $\implies (c\vec{I}+\vec{N}) = \vec{X}^2$\\
+& where $\vec{X} = (\sqrt{c}\vec{M})$\\
 & \\
 \hline
-\textbf{Conclusion} &\\
+\textbf{Conclusion} & Hence it is proved that $(c\vec{I}+\vec{N})$\\
+& has a square root\\
 \hline
 \multirow{3}{*}{} & \\
 \textbf{Proof 2} & Let $\vec{B}$ is any non-singular complex matrix.\\
@@ -248,15 +258,15 @@ $\textbf{Given}$ & If $\vec{A}=\vec{I}+\frac{1}{2}\vec{N}-\frac{1}{8}\vec{N}^2$\
 & $\myvec{c & 1 &0 &...& 0\\0 & c & 1& ...& 0\\.&.&.&...&.\\.&.&.&...&.\\.&.&.&...&1\\0 & 0 &0 &...& c}$\\
 & and this is a Jordon form.\\
 & So, we can consider $\vec{J} = c\vec{I}+\vec{N}$ and \\
-& as $c\vec{I}+\vec{N}= \vec{X}^2$ \\
+& as $c\vec{I}+\vec{N}= \vec{X}^2 \implies \vec{J}=\vec{X}^2$ \\
 & $\implies \vec{B}=\vec{P}\vec{X}^2\vec{P}^{-1}$\\
 & $\implies \vec{B}=\vec{P}\vec{X}\vec{P}^{-1}\vec{P}\vec{X}\vec{P}^{-1}$\\
 & $\implies \vec{B}=(\vec{P}\vec{X}\vec{P}^{-1})^2$\\
 & $\implies \vec{B}=\vec{Y}^2$, where $\vec{Y} = \vec{P}\vec{X}\vec{P}^{-1}$\\
 & This implies that $\vec{B}$ has a square root.\\
 \hline
-\textbf{Conclusion} & Hence it is proved that every non-singular complex \\
-& $n \times n$ matrix has a square root.\\
+\textbf{Conclusion} & Hence it is proved that every non-singular \\
+& complex $n \times n$ matrix has a square root.\\
 & \\
 \hline
 \caption{$\textbf{Solution summary}$}
